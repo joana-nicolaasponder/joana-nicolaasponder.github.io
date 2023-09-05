@@ -27,6 +27,21 @@ ul {
   font-size: 3vw;
 }
 
+.title {
+  font-weight: bold;
+  text-decoration-line: underline;
+}
+
+#catch {
+  color: rgb(234, 115, 35);
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.date {
+  font-size: 10pt;
+}
+
 .dev-academy {
   display: flex;
   flex-direction: column;
