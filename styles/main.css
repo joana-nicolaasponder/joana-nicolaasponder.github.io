@@ -22,11 +22,39 @@ p {
   font-size: 3vw;
 }
 
-ul {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 3vw;
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
 }
 
+.about-text {
+  /* background-color: lightblue; */
+}
+
+.about-image {
+  /* background-color: lightpink; */
+}
+
+.blog-posts {
+  text-align: center;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
+.dev-academy {
+  background-color: lightpink;
+  text-align: center;
+}
+
+.personal {
+  background-color: lightblue;
+  text-align: center;
+}
 .title {
   font-weight: bold;
   text-decoration-line: underline;
