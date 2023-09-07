@@ -4,22 +4,23 @@ body {
 
 h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 10vw;
+  /* font-size: 10vw; */
 }
 
 h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 5vw;
+  /* font-size: 5vw; */
 }
 
 h3 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 4vw;
+  /* font-size: 4vw; */
 }
 
-p {
+p,
+ul {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 3vw;
+  /* font-size: 3vw; */
 }
 
 .about-grid {
@@ -38,6 +39,7 @@ p {
 
 .blog-posts {
   text-align: center;
+  margin-top: 10%;
 }
 
 .blog-grid {
@@ -67,7 +69,7 @@ p {
 }
 
 .date {
-  font-size: 10pt;
+  font-size: 7pt;
 }
 
 .dev-academy {
