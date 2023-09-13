@@ -24,11 +24,23 @@ ol {
   /* font-size: 3vw; */
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
 }
+
+/* .page {
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  column-gap: 20px;
+  background-color: yellow;
+} */
 
 /* .about-text {
   background-color: lightblue;
