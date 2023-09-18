@@ -3,264 +3,289 @@
   <head>
     <title>Understanding JavaScript: A Non-Technical Guide</title>
     <meta charset="UTF-8" />
-    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="/styles/blog.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
-    <h2>Undertanding JavaScript: A Non-Technical Guide</h2>
+    <div class="grid-container">
+      <header>
+        <h1>Understanding JavaScript: A Non-Technical Guide</h1>
+      </header>
 
-    <p>
-      JavaScript is a crucial part of the web experience, powering interactive
-      and dynamic web pages. But what exactly is JavaScript, and how does it
-      work together with HTML and CSS? In this blog post, we will explore the
-      world of JavaScript, covering it's relationship with HTML and CSS, control
-      flow, arrays, objects, functions, and the DOM (Document Object Model) with
-      a glimpse into Dev Tools.
-    </p>
+      <nav>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/blog/javascript-dom.html">Next</a></li>
+      </nav>
 
-    <p class="title">What's JavaScript got to do with it?</p>
-    <p>
-      Imagine a web page as a house, with HTML being the structure (the walls,
-      the doors, windows) and CSS as the paint and decorations. Now think of
-      JavaScript as the electricity that brings the house to life. It adds
-      functionality, interactivity, and responsiveness to your web page.
-    </p>
-    <p>
-      HTML defines the structure of your content, while CSS beautifies it.
-      JavaScript, on the other hand, allows you to make things happen on your
-      website, like displaying a pop up window, validating a form, or updating
-      content without requiring a full page reload.
-    </p>
+      <article>
+        <img
+          src="/images/greg-rakozy-vw3Ahg4x1tY-unsplash.jpg"
+          alt="books titled html, css and javascript"
+        />
+        <p>
+          JavaScript is a crucial part of the web experience, powering
+          interactive and dynamic web pages. But what exactly is JavaScript, and
+          how does it work together with HTML and CSS? In this blog post, we
+          will explore the world of JavaScript, covering it's relationship with
+          HTML and CSS, control flow, arrays, objects, functions, and the DOM
+          (Document Object Model) with a glimpse into Dev Tools.
+        </p>
 
-    <p class="title">
-      Some important JavaScript tools: Control Flow, Arrays, Objects, and Loops
-    </p>
-    <p class="title">Control Flow</p>
-    <p>
-      Control flow in a computer program is like the sequence of steps in a
-      recipe. Just as you follow a recipe from the beginning to the end to make
-      a meal, a computer reads and executes lines of code from the start of a
-      program to the finish. However, sometimes the computer encounters special
-      instructions, like "if something is true, do this," or "keep doing this
-      until a condition is met." These special instructions, like adding extra
-      steps in a recipe, can change the order in which the computer follows the
-      code, making it more flexible and powerful.
-    </p>
+        <p class="title">What's JavaScript got to do with it?</p>
+        <p>
+          Imagine a web page as a house, with HTML being the structure (the
+          walls, the doors, windows) and CSS as the paint and decorations. Now
+          think of JavaScript as the electricity that brings the house to life.
+          It adds functionality, interactivity, and responsiveness to your web
+          page.
+        </p>
+        <p>
+          HTML defines the structure of your content, while CSS beautifies it.
+          JavaScript, on the other hand, allows you to make things happen on
+          your website, like displaying a pop up window, validating a form, or
+          updating content without requiring a full page reload.
+        </p>
 
-    <p class="title">Loops</p>
-    <p>
-      Imagine you have a list of tasks you need to do, like writing numbers from
-      1 to 10. Instead of writing each number one by one, you can use a loop in
-      JavaScript to do this more efficiently. Think of a loop like a little
-      robot that follows your instructions. It repeats a set of actions until a
-      specific condition is met. In the case of writing numbers from 1 to 10,
-      you would use a "for loop."
-    </p>
-    <p>Here's how it works:</p>
-    <ol>
-      <li>
-        Initialization: You start by telling the robot where to begin. In our
-        example, we start at 1.
-      </li>
-      <li>
-        Condition: You give the robot a condition to check. As long as this
-        condition is true, the robot will keep doing the task. In our case, it's
-        checking if the number is less than or equal to 10.
-      </li>
-      <li>
-        Task: You specify the task the robot should do. In this case, it's
-        writing down the number.
-      </li>
-      <li>
-        Update: After each task, you tell the robot how to update itself. In our
-        example, we increase the number by 1.
-      </li>
-    </ol>
-    <p>In JavaScript it would look like this:</p>
-    <img
-      src="/images/js-loop.png"
-      alt="screenshot showing a for loop in javascript"
-    />
+        <p class="title">
+          Some important JavaScript tools: Control Flow, Arrays, Objects, and
+          Loops
+        </p>
+        <p class="title">Control Flow</p>
+        <p>
+          Control flow in a computer program is like the sequence of steps in a
+          recipe. Just as you follow a recipe from the beginning to the end to
+          make a meal, a computer reads and executes lines of code from the
+          start of a program to the finish. However, sometimes the computer
+          encounters special instructions, like "if something is true, do this,"
+          or "keep doing this until a condition is met." These special
+          instructions, like adding extra steps in a recipe, can change the
+          order in which the computer follows the code, making it more flexible
+          and powerful.
+        </p>
 
-    <p class="title">Arrays</p>
-    <p>
-      Think of an array in JavaScript as a special container that allows you to
-      store multiple pieces of information or values in one place. It's like
-      having a box with compartments where you can put different items.
-    </p>
-    <p>
-      Imagine you have a shoebox, and inside that shoebox, you can put not just
-      one item but several items. Each item could be a different thing, like a
-      toy, a book, or a snack. This shoebox is like an array in JavaScript.
-    </p>
+        <p class="title">Loops</p>
+        <p>
+          Imagine you have a list of tasks you need to do, like writing numbers
+          from 1 to 10. Instead of writing each number one by one, you can use a
+          loop in JavaScript to do this more efficiently. Think of a loop like a
+          little robot that follows your instructions. It repeats a set of
+          actions until a specific condition is met. In the case of writing
+          numbers from 1 to 10, you would use a "for loop."
+        </p>
+        <p>Here's how it works:</p>
+        <ol>
+          <li>
+            Initialization: You start by telling the robot where to begin. In
+            our example, we start at 1.
+          </li>
+          <li>
+            Condition: You give the robot a condition to check. As long as this
+            condition is true, the robot will keep doing the task. In our case,
+            it's checking if the number is less than or equal to 10.
+          </li>
+          <li>
+            Task: You specify the task the robot should do. In this case, it's
+            writing down the number.
+          </li>
+          <li>
+            Update: After each task, you tell the robot how to update itself. In
+            our example, we increase the number by 1.
+          </li>
+        </ol>
+        <p>In JavaScript it would look like this:</p>
+        <img
+          src="/images/js-loop.png"
+          alt="screenshot showing a for loop in javascript"
+        />
 
-    <p>In a JavaScript array:</p>
-    <ol>
-      <li>
-        You can store multiple values: You can put many different pieces of
-        information in one array. These values can be numbers, words, or
-        anything else you want to keep together.
-      </li>
-      <li>
-        Each value has a position: Just like items in your shoebox, each value
-        in an array has a specific position or index. The first item is at
-        position 0, the second at position 1, and so on. This helps you find and
-        organize your data.
-      </li>
-      <li>
-        You can do things with the values: You can easily add new values, remove
-        values, change them, or even ask questions about them, like "How many
-        items are in the array?" or "Is a specific value in the array?"
-      </li>
-    </ol>
-    <p>Here's an example of what it looks like in JavaScript:</p>
-    <img
-      src="/images/array-js.png"
-      alt="screenshot showing an array of fruits
+        <p class="title">Arrays</p>
+        <p>
+          Think of an array in JavaScript as a special container that allows you
+          to store multiple pieces of information or values in one place. It's
+          like having a box with compartments where you can put different items.
+        </p>
+        <p>
+          Imagine you have a shoebox, and inside that shoebox, you can put not
+          just one item but several items. Each item could be a different thing,
+          like a toy, a book, or a snack. This shoebox is like an array in
+          JavaScript.
+        </p>
+
+        <p>In a JavaScript array:</p>
+        <ol>
+          <li>
+            You can store multiple values: You can put many different pieces of
+            information in one array. These values can be numbers, words, or
+            anything else you want to keep together.
+          </li>
+          <li>
+            Each value has a position: Just like items in your shoebox, each
+            value in an array has a specific position or index. The first item
+            is at position 0, the second at position 1, and so on. This helps
+            you find and organize your data.
+          </li>
+          <li>
+            You can do things with the values: You can easily add new values,
+            remove values, change them, or even ask questions about them, like
+            "How many items are in the array?" or "Is a specific value in the
+            array?"
+          </li>
+        </ol>
+        <p>Here's an example of what it looks like in JavaScript:</p>
+        <img
+          src="/images/array-js.png"
+          alt="screenshot showing an array of fruits
     in javascript"
-    />
-    <p>
-      So, an array in JavaScript is like a handy way to store a collection of
-      related items in one place, making it easier to work with and manipulate
-      those items in your code. Just like your shoebox keeps your toys and
-      snacks organized, arrays keep your data organized in JavaScript.
-    </p>
-    <p class="title">Objects</p>
-    <p>
-      Imagine you have a notebook where you want to keep track of information
-      about different people, like their names, ages, and hobbies. In
-      JavaScript, an object is like a digital version of that notebook. It helps
-      you organize and store information about various things in a structured
-      way.
-    </p>
-    <p>Here's how you can think of it:</p>
-    <ol>
-      <li>
-        Properties: Think of each page in your notebook as an object. On each
-        page, you have different sections for specific details about a person.
-        These sections can be like "Name," "Age," and "Hobbies." In JavaScript,
-        we call these sections "properties." Each property holds a specific
-        piece of information.
-      </li>
-      <li>
-        Values: Inside each section (property) of your notebook, you write down
-        the actual information. For example, under "Name," you might write
-        "John," and under "Age," you might write "30." These written values are
-        like the data associated with each property in a JavaScript object.
-      </li>
-      <li>
-        Organization: With your notebook, you can easily flip to a page and find
-        all the information about a specific person. Similarly, in JavaScript
-        objects, you can access and organize information about a specific thing,
-        like a person, a car, or anything else you want to describe.
-      </li>
-    </ol>
-    <p>This is what it looks like in JavaScript:</p>
-    <img
-      src="/images/object-js.png"
-      alt="a screenshot showing an object in javascript, detailing a person with properties name, age, and hobbies"
-    />
-    <p>
-      So, in JavaScript, an object is a way to store and organize related
-      information about something (like a person) using properties and values.
-    </p>
-    <p class="title">The Difference Between Objects and Arrays</p>
-    <p>
-      As you read all of this information, you might be thinking to yourself:
-      "what is the difference between an array and an object?". I know I did. So
-      here it is in summary:
-    </p>
-    <ul>
-      <li>
-        Arrays are like lists or ordered collections of things. Imagine you have
-        a shopping list with items like "apples," "bananas," and "bread." Each
-        item has a specific order, and you can easily count how many items are
-        on the list. In JavaScript, arrays keep things organized in a similar
-        way. You can access each item by its position in the list (like the
-        first item, second item, etc.), and you can easily tell how many items
-        are in the list.
-      </li>
-      <li>
-        Objects are great for storing details about something, with each piece
-        of information having a name (like labels in a notebook) to help you
-        quickly find and use that information.
-      </li>
-    </ul>
-    <p>
-      Both arrays and objects are essential tools in JavaScript, and they help
-      programmers organize and work with data effectively in their code.
-    </p>
+        />
+        <p>
+          So, an array in JavaScript is like a handy way to store a collection
+          of related items in one place, making it easier to work with and
+          manipulate those items in your code. Just like your shoebox keeps your
+          toys and snacks organized, arrays keep your data organized in
+          JavaScript.
+        </p>
+        <p class="title">Objects</p>
+        <p>
+          Imagine you have a notebook where you want to keep track of
+          information about different people, like their names, ages, and
+          hobbies. In JavaScript, an object is like a digital version of that
+          notebook. It helps you organize and store information about various
+          things in a structured way.
+        </p>
+        <p>Here's how you can think of it:</p>
+        <ol>
+          <li>
+            Properties: Think of each page in your notebook as an object. On
+            each page, you have different sections for specific details about a
+            person. These sections can be like "Name," "Age," and "Hobbies." In
+            JavaScript, we call these sections "properties." Each property holds
+            a specific piece of information.
+          </li>
+          <li>
+            Values: Inside each section (property) of your notebook, you write
+            down the actual information. For example, under "Name," you might
+            write "John," and under "Age," you might write "30." These written
+            values are like the data associated with each property in a
+            JavaScript object.
+          </li>
+          <li>
+            Organization: With your notebook, you can easily flip to a page and
+            find all the information about a specific person. Similarly, in
+            JavaScript objects, you can access and organize information about a
+            specific thing, like a person, a car, or anything else you want to
+            describe.
+          </li>
+        </ol>
+        <p>This is what it looks like in JavaScript:</p>
+        <img
+          src="/images/object-js.png"
+          alt="a screenshot showing an object in javascript, detailing a person with properties name, age, and hobbies"
+        />
+        <p>
+          So, in JavaScript, an object is a way to store and organize related
+          information about something (like a person) using properties and
+          values.
+        </p>
+        <p class="title">The Difference Between Objects and Arrays</p>
+        <p>
+          As you read all of this information, you might be thinking to
+          yourself: "what is the difference between an array and an object?". I
+          know I did. So here it is in summary:
+        </p>
+        <ul>
+          <li>
+            Arrays are like lists or ordered collections of things. Imagine you
+            have a shopping list with items like "apples," "bananas," and
+            "bread." Each item has a specific order, and you can easily count
+            how many items are on the list. In JavaScript, arrays keep things
+            organized in a similar way. You can access each item by its position
+            in the list (like the first item, second item, etc.), and you can
+            easily tell how many items are in the list.
+          </li>
+          <li>
+            Objects are great for storing details about something, with each
+            piece of information having a name (like labels in a notebook) to
+            help you quickly find and use that information.
+          </li>
+        </ul>
+        <p>
+          Both arrays and objects are essential tools in JavaScript, and they
+          help programmers organize and work with data effectively in their
+          code.
+        </p>
 
-    <p class="title">Functions: Your Handy Helpers</p>
-    <p>
-      Functions in JavaScript are like mini-programs or little helpers that make
-      your life easier when you want to do something repeatedly or perform a
-      specific task.
-    </p>
-    <ol>
-      <li>
-        Reusability: Imagine you have a recipe for making your favorite dish.
-        Instead of rewriting the recipe every time you want to cook it, you have
-        it in a cookbook. Functions in JavaScript work similarly. You can write
-        a set of instructions (the function) once and then use it whenever you
-        need to perform a particular action in your code. This saves you from
-        repeating the same code over and over again.
-      </li>
+        <p class="title">Functions: Your Handy Helpers</p>
+        <p>
+          Functions in JavaScript are like mini-programs or little helpers that
+          make your life easier when you want to do something repeatedly or
+          perform a specific task.
+        </p>
+        <ol>
+          <li>
+            Reusability: Imagine you have a recipe for making your favorite
+            dish. Instead of rewriting the recipe every time you want to cook
+            it, you have it in a cookbook. Functions in JavaScript work
+            similarly. You can write a set of instructions (the function) once
+            and then use it whenever you need to perform a particular action in
+            your code. This saves you from repeating the same code over and over
+            again.
+          </li>
 
-      <li>
-        Organization: Think of functions as compartments or containers for
-        specific tasks. Just like you have different containers for your
-        clothes, kitchen tools, or toys to keep things organized, functions help
-        you keep your code organized. You can group related actions together in
-        separate functions, making your code easier to understand and manage.
-      </li>
-      <li>
-        Clarity: Functions are like well-labeled buttons or switches. When you
-        see a function name in your code, you immediately know what that part of
-        the code is supposed to do. It's like having labels on light switches so
-        you can easily turn on the right light in a room. Functions make your
-        code more readable and easier to follow.
-      </li>
-      <li>
-        Modularity: Imagine building a house with LEGO bricks. Each brick serves
-        a specific purpose, and you can combine them to create complex
-        structures. Functions work in a similar way; you can build more
-        significant and complex programs by combining smaller, reusable
-        functions like LEGO bricks. This modularity makes it easier to work on
-        different parts of a project independently.
-      </li>
-      <li>
-        Bug Prevention: Functions can act as quality control inspectors. You can
-        test a function thoroughly and make sure it works correctly. Once you're
-        confident that the function does its job, you can use it confidently
-        throughout your code. This helps prevent mistakes and bugs because you
-        only need to get one part right (the function) instead of worrying about
-        every detail in your code.
-      </li>
-    </ol>
-    <p>
-      In essence, functions in JavaScript are like handy tools or helpers that
-      allow you to perform tasks efficiently, stay organized, and make your code
-      more understandable, reliable, and reusable. They're an essential building
-      block of programming that simplifies your work, just like having helpful
-      gadgets in your everyday life.
-    </p>
-    <p>It would look like this in JavaScript:</p>
-    <img
-      src="/images/function - js.png"
-      alt="screenshot showing a greet function coded in JavaScript"
-    />
+          <li>
+            Organization: Think of functions as compartments or containers for
+            specific tasks. Just like you have different containers for your
+            clothes, kitchen tools, or toys to keep things organized, functions
+            help you keep your code organized. You can group related actions
+            together in separate functions, making your code easier to
+            understand and manage.
+          </li>
+          <li>
+            Clarity: Functions are like well-labeled buttons or switches. When
+            you see a function name in your code, you immediately know what that
+            part of the code is supposed to do. It's like having labels on light
+            switches so you can easily turn on the right light in a room.
+            Functions make your code more readable and easier to follow.
+          </li>
+          <li>
+            Modularity: Imagine building a house with LEGO bricks. Each brick
+            serves a specific purpose, and you can combine them to create
+            complex structures. Functions work in a similar way; you can build
+            more significant and complex programs by combining smaller, reusable
+            functions like LEGO bricks. This modularity makes it easier to work
+            on different parts of a project independently.
+          </li>
+          <li>
+            Bug Prevention: Functions can act as quality control inspectors. You
+            can test a function thoroughly and make sure it works correctly.
+            Once you're confident that the function does its job, you can use it
+            confidently throughout your code. This helps prevent mistakes and
+            bugs because you only need to get one part right (the function)
+            instead of worrying about every detail in your code.
+          </li>
+        </ol>
+        <p>
+          In essence, functions in JavaScript are like handy tools or helpers
+          that allow you to perform tasks efficiently, stay organized, and make
+          your code more understandable, reliable, and reusable. They're an
+          essential building block of programming that simplifies your work,
+          just like having helpful gadgets in your everyday life.
+        </p>
+        <p>It would look like this in JavaScript:</p>
+        <img
+          src="/images/function - js.png"
+          alt="screenshot showing a greet function coded in JavaScript"
+        />
 
-    <p class="title">Understanding the DOM and DevTools</p>
-    <p>The DOM (Document Object Model):</p>
-    <p>
-      Think of the DOM as the bridge between HTML and JavaScript. It represents
-      your web page's structure as objects, allowing JavaScript to interact with
-      and manipulate HTML elements. For example, you can use JavaScript to
-      change the text of a button, show or hide elements, or update the content
-      of a webpage without reloading it.
-    </p>
-    <!-- <p>
+        <p class="title">Understanding the DOM and DevTools</p>
+        <p>The DOM (Document Object Model):</p>
+        <p>
+          Think of the DOM as the bridge between HTML and JavaScript. It
+          represents your web page's structure as objects, allowing JavaScript
+          to interact with and manipulate HTML elements. For example, you can
+          use JavaScript to change the text of a button, show or hide elements,
+          or update the content of a webpage without reloading it.
+        </p>
+        <!-- <p>
       Think of a web page as a book. The DOM is like an index or table of
       contents for that book. It helps you find, access, and change specific
       parts of the web page, just like an index helps you locate chapters or
@@ -294,24 +319,25 @@
       more interactive and dynamic.
     </p> -->
 
-    <p>DevTools:</p>
-    <p>
-      DevTools, short for Developer Tools, are like a special set of tools that
-      help you inspect and improve a web page, just like a detective's toolkit
-      helps them solve mysteries.
-    </p>
+        <p>DevTools:</p>
+        <p>
+          DevTools, short for Developer Tools, are like a special set of tools
+          that help you inspect and improve a web page, just like a detective's
+          toolkit helps them solve mysteries.
+        </p>
 
-    <p>
-      Imagine you're a detective examining a crime scene. You have tools like a
-      magnifying glass, a flashlight, and a notepad to gather clues, analyze
-      evidence, and solve the case. DevTools are similar tools for web
-      developers to inspect, debug, and improve web pages. They are built into
-      web browsers and provide a set of powerful tools for debugging, testing,
-      and improving your website. With DevTools, you can inspect and edit HTML
-      and CSS in real-time, debug JavaScript code, analyze network requests, and
-      measure performance. It's an essential companion for web developers.
-    </p>
-    <!-- <p>Here's how DevTools help:</p>
+        <p>
+          Imagine you're a detective examining a crime scene. You have tools
+          like a magnifying glass, a flashlight, and a notepad to gather clues,
+          analyze evidence, and solve the case. DevTools are similar tools for
+          web developers to inspect, debug, and improve web pages. They are
+          built into web browsers and provide a set of powerful tools for
+          debugging, testing, and improving your website. With DevTools, you can
+          inspect and edit HTML and CSS in real-time, debug JavaScript code,
+          analyze network requests, and measure performance. It's an essential
+          companion for web developers.
+        </p>
+        <!-- <p>Here's how DevTools help:</p>
     <ol>
       <li>
         Inspect Elements: Just like a magnifying glass helps you examine
@@ -342,35 +368,55 @@
       making sure it looks and works great for everyone who visits it.
     </p> -->
 
-    <p>
-      In conclusion, JavaScript is the magic that brings life and interactivity
-      to your web pages. It works hand in hand with HTML and CSS, allowing you
-      to create dynamic and engaging websites. Understanding control flow,
-      loops, arrays, objects, functions, the DOM, and DevTools empowers you to
-      build interactive and responsive web applications. While JavaScript can at
-      first seem very intimidating and there might be a bit of a learning curve,
-      embrace the power of JavaScript and watch your web projects come to life!
-      I always feel like a wizard when I use JavaScript.
-    </p>
-    <div
-      style="width: 100%; height: 0; padding-bottom: 80%; position: relative"
-    >
-      <iframe
-        src="https://giphy.com/embed/mz1kJeDVueKC4"
-        width="50%"
-        height="50%"
-        style="position: absolute"
-        frameborder="0"
-        class="giphy-embed"
-        allowfullscreen
-      ></iframe>
-    </div>
-    <p>
-      <a
-        href="https://giphy.com/gifs/harry-potter-i-tried-philosophers-stone-mz1kJeDVueKC4"
-      ></a>
-    </p>
+        <p>
+          In conclusion, JavaScript is the magic that brings life and
+          interactivity to your web pages. It works hand in hand with HTML and
+          CSS, allowing you to create dynamic and engaging websites.
+          Understanding control flow, loops, arrays, objects, functions, the
+          DOM, and DevTools empowers you to build interactive and responsive web
+          applications. While JavaScript can at first seem very intimidating and
+          there might be a bit of a learning curve, embrace the power of
+          JavaScript and watch your web projects come to life! I always feel
+          like a wizard when I use JavaScript.
+        </p>
+        <div
+          style="
+            width: 100%;
+            height: 0;
+            padding-bottom: 80%;
+            position: relative;
+          "
+        >
+          <iframe
+            src="https://giphy.com/embed/mz1kJeDVueKC4"
+            width="50%"
+            height="50%"
+            style="position: absolute"
+            frameborder="0"
+            class="giphy-embed"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p>
+          <a
+            href="https://giphy.com/gifs/harry-potter-i-tried-philosophers-stone-mz1kJeDVueKC4"
+          ></a>
+        </p>
+      </article>
+      <aside>
+        <ul>
+          <li>
+            <p><strong>Published on:</strong></p>
+            <p>September 14, 2023</p>
+          </li>
 
-    <a href="/index.html">Back</a>
+          <li>
+            <p><strong>Written by: </strong></p>
+            <p>Joana</p>
+          </li>
+        </ul>
+      </aside>
+      <footer><p>Copyright 2023 Joana Nicolaas Ponder</p></footer>
+    </div>
   </body>
 </html>

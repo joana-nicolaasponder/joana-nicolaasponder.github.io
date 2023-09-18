@@ -12,7 +12,7 @@
     </header>
     <main class="grid-container">
       <div class="about-me">
-        <img src="/images/giphy.gif" alt="featured image" />
+        <img src="/images/Joana copy.jpg" alt="photo of Joana" />
         <div class="about-text">
           <h2>Hi, my name is Joana</h2>
           <p>
@@ -28,16 +28,65 @@
       </div>
 
       <div class="blog">
+        <div class="blog-header">
+          <h1>Blog Posts</h1>
+        </div>
+
+        <!-- Add the "initial" class to the latest three articles -->
+        <article class="initial">
+          <h3>Strengthening Wellbeing with Te Whare Tapa Whā</h3>
+          <p>
+            Using Te Whare Tapa Whā, a model that emphasizes the four dimensions
+            of health developed by Tā Mason Durie in 1984, to plan our overall
+            wellbeing
+          </p>
+          <a href="blog/te-whare-tapa-wha.html" target="blank">Read more</a>
+        </article>
+        <article class="initial">
+          <h3>Unlocking the Potential of Your Brain</h3>
+          <p>
+            We're about to explore the captivating concepts of neuroplasticity
+            and the growth mindset, which hold the keys to unleashing our full
+            potential in the world of development.
+          </p>
+          <a href="/blog/neuroplasticity.html" target="blank">Read more</a>
+        </article>
+        <article class="initial">
+          <h3>Undertanding JavaScript: A Non-Technical Guide</h3>
+          <p>
+            JavaScript is a crucial part of the web experience, powering
+            interactive and dynamic web pages. But what exactly is JavaScript..
+          </p>
+          <a href="/blog/javascript-dom.html" target="blank">Read more</a>
+        </article>
+
+        <!-- Older Blog Posts here, without initial class-->
+        <article>
+          <h3>The Power of Emotional Intelligence: Understanding EQ vs IQ</h3>
+          <p>
+            Emotions play a pivotal role in shaping our lives. Understanding and
+            managing these emotions are essential...
+          </p>
+          <a href="/blog/emotional-intelligence.html" target="blank"
+            >Read more</a
+          >
+        </article>
+        <article>
+          <h3>My Bootcamp Learning Plan</h3>
+          <p>
+            Embarking on a journey in the world of programming and tech feels
+            like stepping into a vast and ever-evolving landscape...
+          </p>
+          <a href="/blog/learning-plan.html" target="blank">Read more</a>
+        </article>
         <article>
           <div>
-            <h3>Te Houtaewa</h3>
+            <h3>How My Identity and Values Shape My Learning Journey</h3>
             <p>
-              E kore e mau i a koe, he wae kai pakiaka. A foot accustomed to
-              running over roots makes the speediest runner.
+              These reflections highlight the influence of culture and personal
+              experiences on my values and identity.
             </p>
-            <a href="/blog/te-houtaewa-template.html" target="blank"
-              >Read more</a
-            >
+            <a href="/blog/identity-values.html" target="blank">Read more</a>
           </div>
         </article>
         <article>
@@ -51,45 +100,45 @@
         </article>
         <article>
           <div>
-            <h3>How My Identity and Values Shape My Learning Journey</h3>
+            <h3>Te Houtaewa</h3>
             <p>
-              These reflections highlight the influence of culture and personal
-              experiences on my values and identity.
+              E kore e mau i a koe, he wae kai pakiaka. A foot accustomed to
+              running over roots makes the speediest runner.
             </p>
-            <a href="/blog/identity-values.html" target="blank">Read more</a>
+            <a href="/blog/te-houtaewa-template.html" target="blank"
+              >Read more</a
+            >
           </div>
         </article>
-        <article>
-          <h3>My Bootcamp Learning Plan</h3>
-          <p>
-            Embarking on a journey in the world of programming and tech feels
-            like stepping into a vast and ever-evolving landscape...
-          </p>
-          <a href="/blog/learning-plan.html" target="blank">Read more</a>
-        </article>
-        <article>
-          <h3>The Power of Emotional Intelligence: Understanding EQ vs IQ</h3>
-          <p>
-            Emotions play a pivotal role in shaping our lives. Understanding and
-            managing these emotions are essential...
-          </p>
-          <a href="/blog/emotional-intelligence.html" target="blank"
-            >Read more</a
-          >
-        </article>
-        <article>
-          <h3>Undertanding JavaScript: A Non-Technical Guide</h3>
-          <p>
-            JavaScript is a crucial part of the web experience, powering
-            interactive and dynamic web pages. But what exactly is JavaScript..
-          </p>
-          <a href="/blog/javascript-dom.html" target="blank">Read more</a>
-        </article>
+
+        <div class="load-more">Load More</div>
       </div>
 
       <footer>
         <p>This is an ever evolving page by Joana Nicolaas Ponder 2023</p>
       </footer>
     </main>
+
+    <script>
+      let loadMoreBtn = document.querySelector('.load-more')
+      let currentItem = 0
+
+      loadMoreBtn.onclick = () => {
+        let articles = document.querySelectorAll('.blog article')
+
+        for (let i = currentItem; i < currentItem + 3; i++) {
+          if (i < articles.length) {
+            articles[i].style.display = 'block'
+          }
+        }
+
+        currentItem += 3
+
+        // Hide the "Load More" button when there are no more items to load
+        if (currentItem >= articles.length) {
+          loadMoreBtn.style.display = 'none'
+        }
+      }
+    </script>
   </body>
 </html>

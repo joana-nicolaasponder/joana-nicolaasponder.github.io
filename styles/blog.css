@@ -103,3 +103,9 @@ footer {
     font-size: 2.5em;
   }
 }
+
+#catch {
+  color: rgb(234, 115, 35);
+  font-weight: bolder;
+  font-style: italic;
+}
