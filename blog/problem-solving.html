@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Art of Problem Solving</title>
+    <meta charset="UTF-8" />
+    <link href="/styles/blog.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <header>
+        <h1>The Art of Problem Solving</h1>
+      </header>
+
+      <nav>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/blog/te-whare-tapa-wha.html">Next</a></li>
+      </nav>
+
+      <article>
+        <img src="/images/bulbasaur.jpg" alt="bulbasaur" />
+        <p>
+          During this sprint we were presented with several short JavaScript
+          challenges (katas). Not only was this meant to help us strengthen our
+          skill in JavaScript, it also helped us understand our approach to
+          problem solving. Here are some of my thoughts!
+        </p>
+        <p class="title">
+          Conquering the Mind-Boggling Object Manipulation Challenge
+        </p>
+        <p>
+          The first thing that comes to mind here is the manipulating objects
+          kata, where we had to add Ben as a property to the value of the Terah
+          children property. Ben had to be an object with a key name and a value
+          "Ben". That whole sentence blew my mind the first time I read it. It
+          felt like one of those illusion paintings and the deeper you look the
+          more you see.
+        </p>
+        <p>
+          So yeah, I was just like 🙄 looking at this problem. I spoke it out
+          loud several times. Wrote it out in smaller steps. Wrote out each part
+          of the problem, just really trying to break it down so that my brain
+          could comprehend what was happening. I looked at the Object Anatomy to
+          understand how Ben had to be an object, but also a property, and
+          started building from there.
+        </p>
+        <p>
+          I knew Ben had to be an object with a key name and the value Ben. So I
+          built the ben object, to visualize it. Then I needed to have that Ben
+          object be a part of Terah's children property. So I knew how to add a
+          new property that was an object to an existing object using dot
+          notation. But I didn't know how to add the Ben object to that
+          property. I tried a lot of different things, like:
+        </p>
+        <img src="/images/Problem Solving 1.png" alt="screenshot of code" />
+        <p>and</p>
+        <img src="/images/Problem Solving 2.png" alt="screenshot of code" />
+        <p>
+          but it didn't work. I googled things like How to Add a Property to an
+          object in javascript, and add a property to the value of another
+          object. I looked at things like the Object defineProperty() Method,
+          and how to add a key-value pair to an existing property. Every search
+          got me trying different things. But nothing worked as expected.
+        </p>
+        <p>
+          Eventually, I turned to chat gpt and gave her my code so far. I asked
+          her for help. Quite literally, this is what I typed "help! How do I
+          add Ben to Terah as a child?" Clearly, I was desperate 😂 Chat gpt was
+          great help, and showed me that I could use dot notation to just
+          continue the logic here...
+        </p>
+        <img src="/images/Problem Solving 3.png" alt="screenshot of code" />
+        <p>Seeing it like that made so much sense.</p>
+        <p class="title">
+          The Art of Elegant Problem-Solving: Capitalizing Strings
+        </p>
+        <p>
+          I think I solved the capitalize problem quite elegantly. I really
+          broke it down into its smaller components and quickly realized that
+          .map() doesn't work on strings and would need to create an array
+          first. I used console.log to log every step while I was problem
+          solving this so I could see what every step was doing, which really
+          helped as well. I also feel quite happy with my variable names this
+          time. Using console.log was also reassuring throughout the problem
+          solving as it allowed me to see that I was heading in the right
+          direction and gave me confidence while working on this.
+        </p>
+        <p class="title">Reflecting on Problem-Solving Techniques</p>
+        <p>
+          I feel pretty confident with most of these, except maybe reading error
+          messages and pseudocode. I like the idea of pseudocode as it provides
+          a structured approach to problem-solving. However, I think I still
+          struggle to write effective pseudocode. While I understand the
+          concept, I sometimes find it challenging to translate my thoughts into
+          clear and actionable pseudocode. It's an area where I'm working on
+          improvement to better plan and organize my code logic. I also have
+          mixed confidence when it comes to reading error messages. While some
+          error messages are clear and provide helpful information, there have
+          been instances where I still struggled to understand the root cause of
+          the problem. I recognize the importance of improving my ability to
+          interpret error messages effectively. Personally, I do feel like I am
+          quite suited to the rubber ducky method as I found it very helpful to
+          speak things through out loud to my "rubber ducky" Bulbasaur.
+        </p>
+        <p class="title">Embracing the Art of Asking for Help</p>
+        <p>
+          I will say, I do take my time before asking for help, even though I
+          feel like I ask a lot of questions. I'll really try to exhaust
+          everything before I reach out in discord. Before joining the bootcamp
+          I asked my brother (who is a developer) for any tips, and he said
+          "don't be afraid to ask questions." And he's right. I believe I will
+          only get out of the bootcamp and this experience what I put in, and
+          that includes asking as many questions (even if they feel stupid) as I
+          need to. That is the beauty of doing the bootcamp, the fact that we
+          have the facilitators and other students working alongside us. And
+          it's the thing I missed when I was trying to teach myself how to code
+          back in the day. Sure, I probably could have reached out in a forum
+          like stack overflow, but the context for all of us at this bootcamp is
+          the same, which is super helpful.
+        </p>
+      </article>
+      <aside>
+        <ul>
+          <li>
+            <p><strong>Published on:</strong></p>
+            <p>September 21, 2023</p>
+          </li>
+
+          <li>
+            <p><strong>Written by: </strong></p>
+            <p>Joana</p>
+          </li>
+        </ul>
+      </aside>
+      <footer><p>Copyright 2023 Joana Nicolaas Ponder</p></footer>
+    </div>
+  </body>
+</html>
