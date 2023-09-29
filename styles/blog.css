@@ -109,3 +109,10 @@ footer {
   font-weight: bolder;
   font-style: italic;
 }
+
+.heading {
+  text-align: center;
+  font-size: 1.7em;
+  text-decoration: underline;
+  color: black;
+}
