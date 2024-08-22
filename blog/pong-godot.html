@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recreating Pong in Godot</title>
+    <meta charset="UTF-8" />
+    <link href="/styles/blog.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <header>
+        <h1>Recreating Pong in Godot</h1>
+      </header>
+
+      <nav>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/blog/foundations-reflection.html">Next</a></li>
+      </nav>
+
+      <article>
+        <img src="/" alt="" />
+        <p></p>
+        <p class="title">Or, as my three year old calls it, "Poooiiiiinnggg"</p>
+        <p>
+          I love games—board games, video games, made-up games. I remember as a
+          kid, I once made an entire board game (though I wish I remembered what
+          it was) and crafted all the little cards and pieces. I have fond
+          memories of my brother and me playing video games together as kids
+          (and even now as adults). My dream has always been to be a part of the
+          games industry in some way, whether as a journalist, a streamer, or a
+          developer. It wasn’t until I started a coding bootcamp that I thought,
+          “Maybe I could learn to develop games.” And so, here I am, teaching
+          myself how to use Godot. Maybe one day, I’ll develop that dream game.
+          Who knows!
+        </p>
+        <p>
+          One of the first roadblocks I hit when learning Godot was deciding
+          where to start. With so many tutorials out there, I often found myself
+          paralyzed by choice, trying to pick the “perfect” one instead of just
+          diving in. Eventually, I discovered a tutorial by
+          <a href="https://www.gdquest.com">GDQuest</a>, which was great for
+          introducing me to the Godot Engine. But after completing it, I didn’t
+          feel like I had truly grasped the concepts beyond copying and pasting
+          code. So, I did what many of us do—I went on Reddit. There, I stumbled
+          upon the
+          <a href="https://20_games_challenge.gitlab.io">20 Games Challenge.</a>
+          This challenge was exactly what I needed: some structure to keep me on
+          track without being a step-by-step walkthrough. The challenge provided
+          definitions of done for each game, leaving me to figure out how to
+          achieve those goals. The first game on the list: Pong.
+        </p>
+        <img src="/images/pong-sketch.png" alt="pong sketch" />
+        <p class="title">Day 1: Building the Basics</p>
+        <p>
+          I got further than expected on Day 1. I broke the game down into
+          smaller parts and started with creating the game area, including walls
+          and a net. I used StaticBody2D nodes for the walls and added collision
+          shapes so the ball could bounce off them. Next, I created the player
+          paddle using a CharacterBody2D with its own collision shape, since it
+          needed to move with user input. To make the paddle move, I figured out
+          how to constrain its movement to the y-axis within the game window,
+          ensuring it wouldn’t move out of bounds. Setting up user input was
+          straightforward, involving just a couple of if statements to control
+          movement with the W and S keys. Success!
+        </p>
+        <p>
+          Then, I moved on to creating the ball using a RigidBody2D. I wrote a
+          simple script to make the ball move and bounce off the paddles and
+          walls. The ball physics worked well at first, but I encountered issues
+          later. I also added a second paddle, but it didn’t behave as expected.
+          Despite my efforts, the paddle could move out of bounds at the bottom
+          and didn’t reach the top of the game area. I decided to tackle this
+          issue the next day as it was time to pick up my son from daycare.
+        </p>
+        <p class="title">Day 2: Adding Features</p>
+        <p>
+          I was excited to get back to it. I really noticed I was getting into
+          that flow state, and it was something I had been missing the past few
+          months. I love learning, and I love how direct the feedback is when
+          you’re coding. You can immediately see whether or not something is
+          working as expected. I was really enjoying this.
+        </p>
+        <p>
+          With a fresh mind, I quickly identified and fixed the issue with the
+          second paddle. Now, both paddles were working, and the ball was
+          bouncing correctly. I then created a restart scene, as my partner
+          suggested, since the ball wasn’t resetting yet. Implementing the
+          restart menu was straightforward: the game checks if the ball goes out
+          of bounds and triggers the UI menu with a restart button.
+        </p>
+        <p>
+          Next, I tackled scoring. While the score tracker worked, it was
+          pointless without a proper ball reset mechanism. I spent most of Day 2
+          and Day 3 trying to fix this. Despite numerous attempts and debugging,
+          I couldn’t resolve why the ball would reset out of bounds after a few
+          successful resets. Even ChatGPT’s suggestions didn’t work.
+          Fortunately, the 20 Games Challenge Discord came to the rescue. A
+          fellow participant not only provided revised code but also explained
+          why my approach wasn’t working. Understanding that RigidBody2D can
+          exhibit unusual behavior when modifying position and velocity directly
+          helped me resolve the issue. The ball reset beautifully after updating
+          the code.
+        </p>
+        <img src="/images/ball-logic.png" alt="ball logic" />
+        <p class="caption">This was causing issues with ball reset logic.</p>
+        <p class="title">Day 3: Refining the Game</p>
+        <p>
+          On Day 3, I updated the score tracker and implemented a game over
+          screen that triggers when a player reaches 10 points. This was simpler
+          than I expected, accomplished with a simple if/else statement.
+        </p>
+        <p class="title">Goals for Pong:</p>
+        <ul>
+          <li>
+            <input type="checkbox" id="item1" checked disabled /><label
+              for="item1"
+              >Create an arena with two walls and a divider.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="item2" checked disabled /><label
+              for="item2"
+              >Add paddles on either end of the play field, controllable by
+              player inputs.
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" id="item3" checked disabled /><label
+              for="item3"
+              >Implement a ball that moves and bounces off paddles and
+              walls.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="item4" checked disabled /><label
+              for="item4"
+              >Detect when the ball leaves the play field and assign a point to
+              the scoring player.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="item5" checked disabled /><label
+              for="item5"
+              >Track and display the score for each player.</label
+            >
+          </li>
+        </ul>
+        <p>
+          With these goals met, the game was technically complete. I still had
+          some stretch goals like adding sound and an AI paddle. I attempted to
+          add sound effects for when the ball hits the paddle, but I encountered
+          an issue. Currently, the game plays a “poing” sound when the game over
+          screen appears, a sound lovingly provided by my son. For now, I’m
+          calling it DONE.
+        </p>
+        <p class="title">Result:</p>
+        <p>
+          You can checkout the source code on my
+          <a href="https://github.com/joana-nicolaasponder/poing">Github</a> or
+
+          <a href="/games/Web/Pong.html" target="_blank">play the game</a>
+          directly.
+        </p>
+
+        <p class="title">Final Thoughts:</p>
+
+        <p>
+          This project was incredibly rewarding. I was thrilled to see a
+          semi-working version of Pong and couldn’t wait to share it with my
+          family. Watching my partner and my three-year-old son play the game,
+          even in its rough state, and hearing them laugh was the best feeling.
+          My son’s enthusiastic “Wow, this is cool!” was priceless and made all
+          the effort worthwhile. I look forward to the day when I can create a
+          fully original game for him to enjoy. This experience has reinforced
+          the joy of problem-solving, the value of community support, and the
+          importance of taking breaks. I’m excited to continue learning and
+          developing new games.
+        </p>
+      </article>
+      <aside>
+        <ul>
+          <li>
+            <p><strong>Published on:</strong></p>
+            <p>August 22, 2024</p>
+          </li>
+
+          <li>
+            <p><strong>Written by: </strong></p>
+            <p>Joana</p>
+          </li>
+        </ul>
+      </aside>
+      <footer><p>Copyright 2023 Joana Nicolaas Ponder</p></footer>
+    </div>
+  </body>
+</html>

@@ -14,15 +14,14 @@
       <div class="about-me">
         <img src="/images/Joana copy.jpg" alt="photo of Joana" />
         <div class="about-text">
-          <h2>Hi, my name is Joana</h2>
+          <h2>Hi, I'm Joana!</h2>
           <p>
-            Welcome to my little corner of the internet. This is a blog page
-            where you can follow along on my Dev Academy journey. I'll be
-            updating this with required Dev Academy technical and reflective
-            blog posts, plus some personal blog posts throughout my coding
-            journey as well. Right now, it's not in the greatest state. But
-            that's because I'm building as I learn :) So check in often to see
-            how this page evolves. I hope you enjoy!
+            I'm an aspiring web developer, and welcome to my little corner of
+            the internet. I started this blog when I began my coding journey
+            with Dev Academy Aotearoa, sharing both technical and reflective
+            posts required by the program. Now, as I continue to grow as a
+            developer, I’m excited to keep sharing my thoughts and experiences
+            here. I hope you enjoy reading
           </p>
         </div>
       </div>
@@ -33,6 +32,16 @@
         </div>
 
         <!-- Add the "initial" class to the latest three articles -->
+        <article class="initial">
+          <h3>Recreating Pong in Godot</h3>
+          <p>
+            Dive into my journey of recreating the classic Pong game using the
+            Godot engine. This post chronicles the challenges, triumphs, and
+            personal moments of joy as I tackled each aspect of game
+            development.
+          </p>
+          <a href="blog/pong-godot.html" target="blank">Read more</a>
+        </article>
         <article class="initial">
           <h3>Reflections on Core Learning</h3>
           <p>
@@ -55,7 +64,9 @@
           </p>
           <a href="blog/problem-solving.html" target="blank">Read more</a>
         </article>
-        <article class="initial">
+
+        <!-- Older Blog Posts here, without initial class-->
+        <article>
           <h3>Strengthening Wellbeing with Te Whare Tapa Whā</h3>
           <p>
             Using Te Whare Tapa Whā, a model that emphasizes the four dimensions
@@ -64,8 +75,6 @@
           </p>
           <a href="blog/te-whare-tapa-wha.html" target="blank">Read more</a>
         </article>
-
-        <!-- Older Blog Posts here, without initial class-->
         <article>
           <h3>Unlocking the Potential of Your Brain</h3>
           <p>
@@ -141,6 +150,7 @@
       </footer>
     </main>
 
+    <!-- LOAD MORE BUTTON -->
     <script>
       let loadMoreBtn = document.querySelector('.load-more')
       let currentItem = 0

@@ -116,3 +116,10 @@ footer {
   text-decoration: underline;
   color: black;
 }
+.caption {
+  font-style: italic;
+  color: #555;
+  text-align: center;
+  margin-top: 0.1em;
+  font-size: 0.8em;
+}
