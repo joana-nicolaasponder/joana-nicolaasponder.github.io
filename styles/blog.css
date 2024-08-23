@@ -2,15 +2,18 @@
 
 body {
   margin: 0;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #333;
 }
+
 ul,
 li {
   padding: 0;
-  /* list-style-type: none; */
   margin-left: 20px;
   margin-right: 20px;
-  line-height: 2em;
+  line-height: 1.8em;
   color: #777;
 }
 
@@ -24,6 +27,7 @@ header {
   grid-column: span 3;
   text-align: center;
   border-bottom: 1px solid #ddd;
+  padding: 15px;
 }
 
 nav {
@@ -40,7 +44,7 @@ article {
 }
 
 article h2 {
-  font-size: 3.5em;
+  font-size: 3em;
   max-width: 800px;
 }
 
@@ -49,9 +53,9 @@ article img {
 }
 
 article p {
-  margin-top: 30px;
-  line-height: 2em;
-  color: #777;
+  margin-top: 20px;
+  line-height: 1.8em;
+  color: #555;
 }
 
 aside {
@@ -63,44 +67,109 @@ footer {
   grid-column: span 3;
   text-align: center;
   border-top: 1px solid #ddd;
-  padding: 30px;
-  font-size: 0.5em;
+  padding: 20px;
+  font-size: 0.8em;
 }
 
 .title {
   font-size: 1.5em;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 20px;
+  }
+
   nav {
     grid-column: span 3;
     border-right: 0;
     border-bottom: 1px solid #ddd;
+    padding: 20px;
   }
+
   nav li {
     display: inline-block;
     margin-right: 10px;
+    font-size: 1em;
   }
+
   article {
-    grid-column: span 2;
+    grid-column: span 3;
+    padding: 20px;
   }
+
+  article h2 {
+    font-size: 2.5em;
+  }
+
   aside {
-    padding: 16px;
+    padding: 20px;
+  }
+
+  footer {
+    padding: 20px;
+    font-size: 0.7em;
   }
 }
 
 @media screen and (max-width: 980px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
   nav,
   article,
   aside {
     grid-column: span 3;
+    padding: 15px;
   }
+
   aside {
     border-left: 0;
     border-top: 1px solid #ddd;
   }
+
   article h2 {
-    font-size: 2.5em;
+    font-size: 2em;
+  }
+
+  nav li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    font-size: 0.7em;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  nav,
+  article,
+  aside {
+    padding: 10px;
+  }
+
+  article h2 {
+    font-size: 1.8em;
+  }
+
+  nav li {
+    font-size: 0.9em;
+  }
+
+  footer {
+    font-size: 0.6em;
+    padding: 10px;
   }
 }
 
@@ -116,6 +185,7 @@ footer {
   text-decoration: underline;
   color: black;
 }
+
 .caption {
   font-style: italic;
   color: #555;
