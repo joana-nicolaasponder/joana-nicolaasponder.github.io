@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 - Not Found</title>
-    <script type="text/javascript">
-      // Preserve the current path after the domain name
-      var path = window.location.pathname
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Not Found</title>
+  <script type="text/javascript">
+    var path = window.location.pathname;
 
-      // Redirect to the index.html and keep the current path
-      // GitHub Pages will serve index.html, and React Router will take over from here
-      window.location.replace('/index.html' + path)
-    </script>
-  </head>
-  <body>
-    <p>Redirecting...</p>
-  </body>
+    if (!path.includes('index.html')) {
+      window.location.replace("/index.html" + path);
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
 </html>
