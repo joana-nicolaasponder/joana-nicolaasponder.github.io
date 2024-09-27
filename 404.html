@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 - Not Found</title>
   <script type="text/javascript">
-    // Check if the user is not already on the homepage
-    if (window.location.pathname !== "/joana-nicolaasponder.github.io/") {
-      // Redirect to the root but preserve the path
-      window.location.replace("/joana-nicolaasponder.github.io" + window.location.pathname + window.location.search);
-    }
+    // Get the current path and query string
+    var currentPath = window.location.pathname + window.location.search;
+
+    // Ensure we don't get into an infinite loop by checking the pathname
+    // Redirect to index.html but keep the original route
+    window.location.replace("/joana-nicolaasponder.github.io/index.html" + currentPath);
   </script>
 </head>
 <body>
