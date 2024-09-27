@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 - Not Found</title>
   <script type="text/javascript">
-    var path = window.location.pathname;
-
-    var repoPath = "/joana-nicolaasponder.github.io";
-
-    if (!path.includes('index.html')) {
-      window.location.replace(repoPath + path);
+    // Check if the user is not already on the homepage
+    if (window.location.pathname !== "/joana-nicolaasponder.github.io/") {
+      // Redirect to the root but preserve the path
+      window.location.replace("/joana-nicolaasponder.github.io" + window.location.pathname + window.location.search);
     }
   </script>
 </head>
